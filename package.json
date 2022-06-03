@@ -44,10 +44,14 @@
     "pandoc-doc-install": "pandoc --wrap=preserve --columns=10000 --from=markdown --to=rst --output=doc/install.rst wiki/Install.md",
     "pandoc-doc-exchanges": "pandoc --wrap=preserve --columns=10000 --from=markdown --to=rst --output=doc/exchanges.rst wiki/Exchange-Markets.md",
     "pandoc-doc-exchanges-by-country": "pandoc --wrap=preserve --columns=10000 --from=markdown --to=rst --output=doc/exchanges-by-country.rst wiki/Exchange-Markets-By-Country.md",
-    "postinstall": "node postinstall"
+    "postinstall": "node postinstall",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "types": "./ccxt.d.ts",
-  "dependencies": {},
+  "dependencies": {
+    "@snyk/protect": "latest"
+  },
   "devDependencies": {
     "ansicolor": "1.1.81",
     "as-table": "1.0.37",
@@ -55,10 +59,10 @@
     "browserify": "14.5.0",
     "chai": "4.1.2",
     "chai-as-promised": "7.1.1",
-    "eslint": "^4.19.1",
+    "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "12.1.0",
     "eslint-plugin-import": "2.16.0",
-    "mocha": "5.2.0",
+    "mocha": "6.2.3",
     "ololog": "1.1.121"
   },
   "author": {
@@ -495,5 +499,6 @@
     "url": "https://opencollective.com/ccxt",
     "logo": "https://opencollective.com/ccxt/logo.txt"
   },
-  "ethereum": "0x26a3CB49578F07000575405a57888681249c35Fd"
+  "ethereum": "0x26a3CB49578F07000575405a57888681249c35Fd",
+  "snyk": true
 }
