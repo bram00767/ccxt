@@ -49,7 +49,7 @@
   "types": "./ccxt.d.ts",
   "dependencies": {},
   "devDependencies": {
-    "ansicolor": "1.1.81",
+    "ansicolor": "1.1.100",
     "as-table": "1.0.37",
     "asciichart": "1.5.7",
     "browserify": "14.5.0",
